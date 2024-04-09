@@ -1,4 +1,36 @@
+BODY {
+    font-family: Verdana, Arial, sans-serif;
+    font-size:  medium;
+    width: auto;
+    max-width: 55em;
+    background-color: #87ceeb;
+ }
+ 
+ /* The following means that all the header tags will share these
+ properties. */
+ 
+ H1, H2, H3, H4, H5, H6 {
+     font-family: Verdana, Arial, sans-serif;
+     color: navy;
+     }
+ 
+ /* The following apply to particular header tags.  */
+ 
+ H1 { 
+  font-size: xx-large; 
+  text-align: center;
+}
+ 
+ H2 { 
+  font-size: x-large; 
+  text-align: center;
+  font-weight: bold; 
+  border-bottom: 1px solid #000080 
+}
+
 ul {
-    border: 3px blue solid;
+    display: inline-block;
+    border: 3px #0000ff solid;
+    border-radius: 12px;
     padding: 10px;
 }
