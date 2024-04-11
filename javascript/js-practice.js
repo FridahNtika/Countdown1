@@ -13,7 +13,7 @@ let bookList = [
     { title: "Moby Dick", author: "Herman Melville" },
   ];
 
-  /*// adds a book
+  /// adds a book
   const addBook = (name, author) => {
     bookList.push({title: name, author: author});
   }
@@ -39,13 +39,41 @@ let bookList = [
   
   /* (4) Write a one-line arrow function that takes in a number and returns a string stating whether the
     number is positive or negative using a ternary operator (assume the number will never be zero) */
-  /*const numCheck = num => {
+  const numCheck = num => {
+    let check = (num > 0) ?  "Positive" : "Negative";
+    return check;
+  }
 
-  }*/
+  console.log(numCheck(-2));
   
   /* (5) Write a switch statement for a 'day' variable that prints out something based off of what day of
     the week it is i.e. if it's Monday, print "good luck" or wednesday print "hump day" or friday print "party" */
+  let day = "Thursday";
   
+  switch(day) {
+    case("Sunday"):
+    console.log("Go to church")
+    break;
+    case("Monday"):
+    console.log("Good luck")
+    break;
+    case("Tuesday"):
+    console.log("You survived Monday")
+    break;
+    case("Wednesday"):
+    console.log("Hump day")
+    break;
+    case("Thursday"):
+    console.log("You're almost there")
+    break;
+    case("Friday"):
+    console.log("It's the weekend")
+    break;
+    case("Saturday"):
+    console.log("What a week!")
+    break;
+  };
+
   /* (6) Write an arrow function that takes in a number, and uses a for loop to return the sum of every
     number from 1 up to that number
     ex. sumUp(7) = 28 */
@@ -57,7 +85,7 @@ let bookList = [
     return sum;
   }
 
-  //console.log(numSum(7));
+  console.log(numSum(7));
   /* Harder Challenge */
   
   /* (7) Write an arrow function that converts the temperature from Celsius to Fahrenheit and then tells
@@ -79,7 +107,7 @@ let bookList = [
     }
   }
 
-  //celFah(16);
+  celFah(16);
   /* (8) Write a function that takes in an array and prints out the amount of truthy values in that array
     using .forEach() */
   const truthCheck = arr => {
@@ -89,7 +117,7 @@ let bookList = [
     });
   }
   const exampleArray = ["Hello, world!", 8, null, false, "", "0", -22];
-  //truthCheck(exampleArray);
+  truthCheck(exampleArray);
   
   /* (9) Using the map function and arrow syntax, return an array of object that contain a fullName field
     and an averageGrade field representing the letter grade that corresponds to their GPA */
@@ -103,6 +131,27 @@ let bookList = [
     { firstName: "Jackson", lastName: "Wolf", gpa: 4.0 },
     { firstName: "Jared", lastName: "Nguyen", gpa: 4.0 },
   ];
+
+  const gradeMap = {
+    4.0: 'A',
+    3.7: 'A-',
+    3.3: 'B+',
+    3.0: 'B',
+    2.7: 'B-',
+    2.3: 'C+',
+    2.0: 'C',
+    1.7: 'C-',
+    1.3: 'D+',
+    1.0: 'D',
+    0.0: 'F'
+  };
+
+  let finalArr = attendance.map(person => ({
+name: `${person.firstName} ${person.lastName}`,
+grade: gradeMap[Math.floor(person.gpa)]
+  }))
+
+  console.log(finalArr);
   
   /* Hardest Challenge (Don't do this without completing harder challenges) */
   
